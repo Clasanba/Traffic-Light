@@ -1,25 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
+import TrafficLight from "./TrafficLight.jsx";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
-//create your first component
 const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+	const[color,setColor] = useState("");
+
+	return (<>
+
+		<div className ="stick"></div>
+		<div  className="containerLight color">
+			<div className={"lightRed " + (color == "red" ? "lightOn" : "")} onClick={()=>{setColor("red")}}></div>
+			<div className={"lightOrange "+ (color == "orange" ? "lightOn" : "")} onClick={()=>{setColor("orange")}}></div>
+			<div className={"lightGreen "+ (color == "green" ? "lightOn" : "")} onClick={()=>{setColor("green")}}></div>
 		</div>
+		</>
 	);
 };
 
