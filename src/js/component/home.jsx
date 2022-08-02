@@ -11,7 +11,7 @@ const Home = () => {
 		<div  className="containerLight color">
 			<div className={"lightRed " + (color == "red" ? "lightOn" : "")} onClick={()=>{setColor("red")}}></div>
 			<div className={"lightOrange "+ (color == "orange" ? "lightOn" : "")} onClick={()=>{setColor("orange")}}></div>
-			<div className={"lightGreen "+ (color == "green" ? "lightOn" : "")} onClick={()=>{setColor("green")}}></div>
+			<div className={"lightGreen "+ (color == "green" ? "lightOn" : "")} onClick={()=>{setColor("green")}}></div >
 		</div>
 		</>
 	);
